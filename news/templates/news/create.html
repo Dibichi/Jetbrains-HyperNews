@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hyper news</title>
+  </head>
+  <body>
+    <form method="post">{% csrf_token %}
+		<input type="text" name="title">
+		<input type="text" name="text">
+		<button type="submit">Add news</button>
+	</form>
+	<br>
+    <a target="_blank"href="/news/">Meh</a>
+  </body>
+</html>

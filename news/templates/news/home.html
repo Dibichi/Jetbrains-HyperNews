@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyper news</title>
+  </head>
+  <body>
+    <h2>Hyper news</h2>
+	<form method ="get">
+		<input name ="q">
+		<input type="submit" value="Search">
+	</form>
+    {% for date, news in all_pages.items %}
+    <h4>{{ date }}</h4>
+    <ul>
+      {% for story in news %}
+        <li><a href="/news/{{ story.link }}/">{{ story.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+    <a href="/news/create/">Meh</a>
+  </body>
+</html>
